@@ -2,22 +2,22 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>
-        welcome to my blog
-    </title>
+  <meta charset="utf-8">
+  <title>
+    欢迎光临我的博客
+  </title>
 </head>
 
 <body>
-    <h1>welcome to my blog </h1>
-    <hr>
-    {% for post in posts %}
-    <p style="font-family: 微软雅黑;font-size: 16pt;font-weight: bold; ">
-        <a href="/post/{{post.slug}}">{{post.title}}</a>
-    </p>
-    {% endfor %}
-    <hr>
-    <h3>now time: {{now}}</h3>
+  <h1>欢迎光临我的博客</h1>
+  <hr>
+  {% for post in posts %}
+  <p style="font-family: 微软雅黑;font-size: 16pt;font-weight: bold; ">
+    <a href="/post/{{post.slug}}">{{post.title}}</a>
+  </p>
+  {% endfor %}
+  <hr>
+  <h3>现在时间是: {{now}}</h3>
 </body>
 
 </html>
