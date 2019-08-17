@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/home/tangyan/myDjango/VENV/bin/python3",         //虚拟环境中python的位置
+    "python.formatting.provider": "autopep8",
+    "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    ]
+    }
