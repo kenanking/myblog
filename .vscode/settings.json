@@ -4,5 +4,6 @@
     "python.linting.pylintArgs": [
     "--load-plugins",
     "pylint_django",
-    ]
+    ],
+    "view-in-browser.customBrowser": "chrome",
     }
