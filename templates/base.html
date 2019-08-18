@@ -5,9 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% block title %}
-
-        {% endblock title %}
+        {% block title %} {% endblock title %}
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -16,15 +14,35 @@
 <body>
     <div class="container-fluid">
         {% include "header.html" %}
-        <div class="panel-default">
-            <div class="panel-heading">
-                {% block headmessage %} {% endblock headmessage %}
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>
+                            MENU
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="/" class="list-group-item">HOME</a>
+                            <a href="www.ehehe.cn" class="list-group-item">新闻1</a>
+                            <a href="www.ehehe.cn" class="list-group-item">新闻2</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="panel-body">
-                {% block content %} {% endblock content %}
-            </div>
-            <div class="panel-footer">
-                {% include "footer.html" %}
+            <div class="col-sm-8 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% block headmessage %} {% endblock headmessage %}
+                    </div>
+                    <div class="panel-body">
+                        {% block content %} {% endblock content %}
+                    </div>
+                    <div class="panel-footer">
+                        {% include "footer.html" %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
